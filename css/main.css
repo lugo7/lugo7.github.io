@@ -1,0 +1,204 @@
+/*links*/
+
+a,
+a:focus,
+a:hover {
+  color: #ff9900;
+}
+
+
+/*should change this*/
+
+a:active {
+  color: #ffad33;
+}
+
+
+/*base structure*/
+
+html,
+body {
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+@media(min-width:50em){
+ .coverHeight{
+ 		height: 100%; !important
+	} 
+}
+
+.coverContainer {
+  max-width: 1024px;
+}
+
+.orangeBorder {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ff9900;
+}
+
+
+/*
+ *header
+ */
+
+.headerContainer {
+  max-width: 1000px;
+  margin-bottom: 1rem;
+  max-height: 3rem;
+  background-color: transparent;
+}
+
+.headerNav .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+  margin-left: auto;
+  z-index: -1;
+}
+
+.headerNav .nav-link:hover,
+.headerNav .nav-link:focus {
+  border-bottom: solid 5px #ff9900;
+}
+
+.headerNav .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.f-r {
+  margin-left: 	auto; 
+}
+
+.fr {
+  float: right;
+}
+
+@media (max-width: 48em) {
+  .headerNav {
+    clear: both;
+    background-color: default;
+  }
+}
+
+
+/*body*/
+
+.cover {
+  padding: 0 1.5rem;
+}
+
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+.mainContent {
+  width:100%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.lead {
+  text-align: justify;
+  padding-left: 1em;
+}
+
+.sideContent {
+  margin: 0 auto;
+  margin-top: 0rem;
+  margin-left: 2rem;
+  line-height: 2;
+}
+
+.techList {
+  font-size: 1.1em;
+}
+
+.socialButtons {
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.socialButtons img {
+  padding: .5rem;
+}
+
+.small {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.addContent {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects{
+  margin: 0 auto;
+  border: 2px solid #ff9900;
+  padding: 1rem;
+}
+
+.project{
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.projectName{
+  text-align: center;
+}
+
+.preview{
+  width:16rem;
+  height:11rem;
+  padding-bottom:1rem;
+  border-bottom: 2px solid #ff9900;
+}
+
+.centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.subHeader{
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.currentPost{
+  min-width: 100%;
+  padding: 1rem;
+}
+
+.currentPost p{
+  padding-left: 1rem;
+}
+
+.currentPost h5{
+  text-decoration: underline;
+  text-decoration-color: #ff9900;
+}
+
+/*footer*/
+
+.footer {
+  color: rgba(255, 255, 255, .5);
+  margin-top: auto;
+}
