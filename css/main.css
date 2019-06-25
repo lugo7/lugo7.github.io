@@ -64,6 +64,7 @@ body {
 
 .headerNav{
     margin-left:0 auto;
+    background-color: transparent;
 }
 
 .headerNav .nav-link {
@@ -98,7 +99,6 @@ body {
   .headerNav {
     min-width:100%;
     margin: 0 auto;
-    background-color: default;
   }
 }
 
@@ -110,7 +110,6 @@ body {
 #myNavbar{
     position: relative;
     z-index:2;
-    background-color: #333;
 }
 
 
