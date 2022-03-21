@@ -1,0 +1,299 @@
+body{
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#background{
+  margin: 0 auto;
+  padding: 0;
+}
+
+#background img{
+  object-fit: fill;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#overlay{
+  position: absolute;
+  top: 37%;
+  right: 20.5%;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+#overlay h1{
+  margin: 7px;
+}
+
+#overlay span{
+  color: #FF0039;
+}
+
+#viewWork{
+  width: 150px;
+  border: 2px solid #ddd;
+  margin-top: 7px;
+  display: flex;
+  justify-content: center;
+}
+
+.active{
+  color:#FF0039;
+}
+
+.activeB{
+  background: #FF0039;
+}
+
+nav{
+  width: 100%;
+  height: 40px;
+  background: #151B25;
+  margin-top: -4px;
+  border-bottom: solid 5px #FF0039;
+}
+
+nav ul{
+  display: flex;
+  padding-top: 10px;
+  list-style-type: none;
+  font-size: 1.2em;
+}
+
+nav li{
+  margin-right: 40px;
+}
+
+nav li a{
+  color: white;
+  text-decoration: none;
+}
+
+.container{
+  padding-top:30px;
+  padding-bottom: 50px;
+}
+
+.container, nav ul{
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  clear: both;
+}
+
+#workEthic{
+  display: flex;
+}
+
+.ethicItem{
+  max-width: 25%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ethicItem h3, .ethicItem p{
+  margin: 0 auto;
+  clear: both;
+  padding: 10px 20px 0 20px;
+  text-align: center;
+}
+
+.hexagon{
+  width: 45%;
+}
+
+.hexagon-top{
+  float: left;
+  border-right: 30px solid #123345;
+  border-top: 52px solid transparent;
+  border-bottom: 52px solid transparent;
+}
+
+.hexagon-middle{
+  float: left;
+  width: 60px;
+  height: 84px;
+  background-color: #123345;
+  padding-top: 20px;
+}
+
+.hexagon-bottom{
+  float: left;
+  border-left: 30px solid #123345;
+  border-top: 52px solid transparent;
+  border-bottom: 52px solid transparent;
+}
+
+#skills{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.row{
+  height: 30px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.skill{
+  background:#123345;
+  color: #eee;
+  width: 100px;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.progressBar{
+  background:#e5e5e5;
+  width: 100%;
+}
+
+.progressBar p{
+  margin: 0;
+  float: right;
+  padding-top: 6px;
+  padding-right: 5px;
+  color: #111;
+  font-weight: bold;
+}
+
+.fluency{
+  background:#FF0039;
+  float: left;
+  height: 30px;
+}
+
+.nine{
+  width: 90%;
+}
+
+.seven{
+  width: 70%;
+}
+
+.five{
+  width: 50%;
+}
+
+.darkerBack{
+  background: #e5e5e5;
+}
+
+#projectType{
+  display: flex;
+  margin: 0 auto;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  width: 63%;
+}
+
+.projectTypeButton{
+  padding: 0 40px 0 40px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.projectRow{
+  display: flex;
+  margin: 0 auto;
+}
+
+.projectItem{
+  margin:0 auto;
+  width: 33%;
+  height: 300px;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  border: 1px solid red;
+  text-align: center;
+  background: #252934;
+}
+
+.projectItem a{
+  text-decoration: none;
+  color:#eee;
+}
+
+.contact{
+  background: #252934;
+  color: #ddd;
+  height: 600px;
+}
+
+.contact p{
+  color: #FF0039;
+  width: 50%;
+  text-align:center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  font-size: 1.2em;
+}
+
+.contact form{
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+
+form input, #emailMessage{
+  width: 100%;
+  line-height: 30px;
+  margin-bottom: 5px;
+  background: #1d242c;
+  border: none;
+  color: #fff;
+}
+
+#submit{
+  float: right;
+  border: 2px solid #fff;
+  width: 100px;
+  line-height: 30px;
+}
+
+#emailMessage{
+  height: 150px;
+  resize: none;
+  margin-bottom: 40px;
+}
+
+#social{
+  background: #151B25;
+  height: 150px;
+  color: #FF0039;
+}
+
+#socials{
+  display: flex;
+  width: 15%;
+  margin: 0 auto;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+#socials img{
+  flex-grow: 1;
+  padding-left: 0;
+  width: 50px;
+  height: 50px;
+}
+
+#social p{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}

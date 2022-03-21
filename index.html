@@ -1,73 +1,180 @@
 <!doctype html>
-<html lang='en' class="backgroundShrink">
-
+<html lang="en" dir="ltr">
 <head>
-  <title>SophosLumic</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel='stylesheet' href='css/main.css'>
+  <title>Michael Lugo</title>
+  <link rel="Stylesheet" href="style.css" type="text/css">
+  <meta charset="UTF-8"/>
+  <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
 </head>
-
-<body class="backgroundShrink">
-  <div class="container coverContainer d-flex w-100 h-100 p-4 mx-auto flex-column">
-    <header class="headerContainer orangeBorder">
-      <nav class="navbar navbar-dark bg-inverse navbar-expand-sm">
-        <div class="navbar-header headerNav">
-          <h3 class="navbar-brand active"><a class='' href='index.html'>Michael Lugo</a></h3>
-          <button type="button" class="navbar-toggler collapsed fr" id="navToggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+<body>
+  <main>
+    <div id=background>
+      <img src="images/nightSky.jpg"/>
+      <div id="overlay">
+        <h1>Hello, I'm <span>Michael Lugo</span>,</h1>
+        <h1>I'm a full-stack web developer.</h1>
+        <div id="viewWork">
+          <p>View my work</p>
+          <!--put an arrow here-->
         </div>
-        <div class="navbar-collapse collapse" id="myNavbar">
-          <div class=" headerNav f-r justify-content-center">
-            <ul class="navbar-nav navUl">
-              <li class="nav-item"><a class="nav-link" href="html/current.html">CURRENT</a></li>
-              <li class="nav-item"><a class="nav-link" href="html/projects.html">PROJECTS</a></li>
-            </ul>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="lightBack">
+      <div class="container" id="aboutSection">
+        <h1 class="header">About</h1>
+        <div id="workEthic">
+          <div class="ethicItem">
+            <div class="hexagon">
+              <div class="hexagon-top"></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:responsive" style="color: white;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-bottom"></div>
+            </div>
+            <h3>Responsive</h3>
+            <p>My websites will work on any device.</p>
+          </div>
+          <div class="ethicItem">
+            <div class="hexagon">
+              <div class="hexagon-top"></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="akar-icons:light-bulb" style="color: white;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-bottom"></div>
+            </div>
+            <h3>Intuitive</h3>
+            <p>Websites should be easy for the average user.</p>
+          </div>
+          <div class="ethicItem">
+            <div class="hexagon">
+              <div class="hexagon-top"></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:speedometer" style="color: white;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-bottom"></div>
+            </div>
+            <h3>Fast</h3>
+            <p>Fast load times, and lag free interaction is a must.</p>
+          </div>
+          <div class="ethicItem">
+            <div class="hexagon">
+              <div class="hexagon-top"></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:application-brackets-outline" style="color: white;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-bottom"></div>
+            </div>
+            <h3>Clean Code</h3>
+            <p>I write code with readability and reusability in mind.</p>
           </div>
         </div>
-      </nav>
-    </header>
-    <div class="container pushDown">
-      <div class="mainContent orangeBorder">
-        <main class="inner w-50 mt-1">
-          <h2 class="cover-heading">Full Stack Programmer</h2>
-          <p class="lead">A curious, and dedicated full stack developer, I am passionate about learning new technologies, and building new things, as well as solving challenging problems. I have worked with Python, JavaScript, and C++ programming languages.</p>
-        </main>
-
-        <div class="sideContent w-50 p-4 ml-auto">
-          <h5>Knowledgable in the following technologies.</h5>
-          <ul class="pl-3 techList">
-            <li>Python3 | JavaScript | C++ | HTML5 | CSS3 | XML</li>
-            <li>BootStrap | Sass | JQuery | Flask | MySQL | SQLite</li>
-            <li>REST API | Responsive Layout | Git</li>
-            <li>Windows | Linux</li>
-          </ul>
+        <div id="skills">
+          <div class="row">
+            <div class="skill">HTML</div>
+            <div class="progressBar">
+              <div class="fluency nine"></div>
+              <p>90%</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="skill">CSS</div>
+            <div class="progressBar">
+              <div class="fluency nine"></div>
+              <p>90%</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="skill">JavaScript</div>
+            <div class="progressBar">
+              <div class="fluency seven"></div>
+              <p>70%</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="skill">Python</div>
+            <div class="progressBar">
+              <div class="fluency seven"></div>
+              <p>70%</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="skill">C++</div>
+            <div class="progressBar">
+              <div class="fluency five"></div>
+              <p>50%</p>
+            </div>
+          </div>
         </div>
       </div>
-  	</div>
-    <div class="addContent orangeBorder">
-      <p><b>What have I done in the past? See my </b><a href='html/projects.html'>Projects </a>page.</p>
-      <p><b>What am I doing now? See my </b><a href='html/current.html'>Current </a>page.</p>
-        <p><b>I am open to freelance projects, </b><a href='#'>Contact me</a> about anything!</p>
     </div>
-
-    <div class="socialButtons">
-      <a href="https://www.linkedin.com/in/lugomichael7/"><img class="small" src="images/linkedin.svg" alt="linkedIn logo" /></a>
-      <a href="https://github.com/lugo7"><img class="small" src="images/github-logo.svg" alt="Github logo" /></a>
-      <a href="mailto:lugo.michael.77@gmail.com?subject=Project Inquiry"><img class="small" src="images/close-envelope.svg" alt="email icon" /></a>
-    </div>
-
-    <footer class="footer">
-      <div class="">
-        <p>Michael Lugo &copy;2019</p>
+    <div class="darkerBack">
+      <div class="container" id="portfolioSection">
+        <h1 class="header">Projects</h1>
+        <div id="projects">
+          <div id="projectType">
+            <div class="projectTypeButton activeB">All</div>
+            <div class="projectTypeButton">Web</div>
+            <div class="projectTypeButton">Python</div>
+            <div class="projectTypeButton">C++</div>
+          </div>
+          <div class="projectRow"><!--row--->
+            <div class="projectItem">
+              <a href="https://github.com/lugo7/HackedNotifier">
+              <h3>HackedNotifier</h3>
+              <h5>Python/Beautifulsoup</h5>
+              <p>A Python scraper script that notifies people by email that their passwords have been compromised.</p>
+              </a>
+            </div>
+            <div class="projectItem">
+              <a href="https://github.com/lugo7/pongClone">
+              <h3>Pong Clone</h3>
+              <h5>Python/Pygame</h5>
+              <p>A Python implementation of the classic game "Pong"</p>
+              </a>
+            </div>
+            <div class="projectItem">
+              <a href="https://github.com/lugo7/Simon-Says-Clone">
+              <h3>Simon Says Clone</h3>
+              <h5>JavaScript</h5>
+              <p>A JavaScript implementation of the game "Simon Says"</p>
+              </a>
+            </div>
+          </div>
+          <div class="projectRow"><!--row--->
+            <div class="projectItem">
+              <a href="https://github.com/lugo7/bowCrafter">
+              <h3>BowCrafter</h3>
+              <h5>HTML/CSS</h5>
+              <p>A small static website</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="navbarjs"></script>
+    </div>
+    <div class="contact">
+      <div class="container" id="ContactSection">
+        <h1 class="header">Contact</h1>
+        <p>Have a question or want to work together?</p>
+        <form>
+          <input type = "text" name = "name" placeholder="Name" /><br>
+          <input type = "text" name = "email" placeholder="Enter email" /><br>
+          <textarea id="emailMessage" type = "text" name = "emailMessage" placeholder="Your message"></textarea><br>
+          <p id="submit">Search</p>
+        </form>
+      </div>
+    </div>
+    <div id="social">
+      <div id="socials">
+        <img src="images/linkedin.svg"/>
+        <img src="images/github-logo.svg"/>
+      </div>
+      <p>Michael Lugo &copy; 2022</p>
+    </div>
+  </main>
 </body>
-
 </html>
