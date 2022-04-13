@@ -178,6 +178,11 @@ nav li a{
     margin-bottom: 100px;
 }
 
+#skillHeader{
+  text-align: center;
+  text-decoration: underline;
+}
+
 .row{
   height: 30px;
   margin-bottom: 15px;
@@ -192,7 +197,7 @@ nav li a{
 
 @keyframes slideRight {
   0%{
-    transform: translateX(400px);
+    transform: translateX(500px);
   }
   100%{
     transform: translateX(0);
@@ -206,7 +211,7 @@ nav li a{
 
 @keyframes slideLeft {
   0%{
-    transform: translateX(-400px);
+    transform: translateX(-500px);
   }
   100%{
     transform: translateX(0);
@@ -263,16 +268,19 @@ nav li a{
 
 #projectType{
   display: flex;
+  width:60%;
   margin: 0 auto;
   font-size: 1.5em;
-  margin-bottom: 20px;
-  width: 63%;
+  margin-bottom: 40px;
 }
 
 .projectTypeButton{
-  padding: 0 40px 0 40px;
-  margin-left: 50px;
+  width:25%;
   text-align: center;
+}
+
+.projectTypeButton:hover{
+  cursor: pointer;
 }
 
 .projectRow{
@@ -282,18 +290,19 @@ nav li a{
 
 .projectItem{
   margin:0 auto;
-  width: 33%;
-  height: 300px;
-  margin-left: 4px;
-  margin-bottom: 4px;
+  height: 400px;
+  margin-left: 32px;
+  margin-bottom: 8px;
+  padding: 4px;
   border: 1px solid red;
   text-align: center;
   background: #252934;
 }
 
-.projectItem a{
+.projectRow a{
   text-decoration: none;
   color:#eee;
+  width:50%;
 }
 
 .contact{
@@ -320,10 +329,11 @@ nav li a{
 form input, #emailMessage{
   width: 100%;
   line-height: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   background: #1d242c;
   border: none;
   color: #fff;
+  padding:0 20px 0 20px;
 }
 
 #submit{
@@ -331,6 +341,7 @@ form input, #emailMessage{
   border: 2px solid #fff;
   width: 100px;
   line-height: 30px;
+  margin-top:-30px;
 }
 
 #emailMessage{
@@ -341,15 +352,15 @@ form input, #emailMessage{
 
 #social{
   background: #151B25;
-  height: 150px;
   color: #FF0039;
+  padding:1px;
 }
 
 #socials{
   display: flex;
-  width: 15%;
   margin: 0 auto;
-  padding-top: 40px;
+  width:15%;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -364,4 +375,5 @@ form input, #emailMessage{
   width: 50%;
   margin: 0 auto;
   text-align: center;
+  padding:10px;
 }

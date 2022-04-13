@@ -1,10 +1,18 @@
 var hex = document.getElementsByClassName('ethicItem');
 var row = document.getElementsByClassName('row');
+var project = document.getElementsByClassName('projectItem');
+var row2 = document.getElementsByClassName('row2');
 for(let i=0;i<hex.length;i++){
   hex[i].style.opacity="0%";
 }
 for(let i=0;i<row.length;i++){
   row[i].style.opacity='0%';
+}
+for(let i=0;i<project.length;i++){
+  project[i].style.opacity='0%';
+}
+for(let i=0;i<row2.length;i++){
+  row2[i].style.opacity='0%';
 }
 
 function isInViewport(elem) {
@@ -29,18 +37,16 @@ function slideIn(elem,i){
   var elemt = elem[i];
   if(elemt.classList.contains('right')){
     return function(){
-      fadeIn(elem,i);
       elemt.classList.add('hexagon-animation');
-      elemt.style.opacity='100%';
       elemt.classList.add('slideRight');
+      elemt.style.opacity='100%';
     }
   }
   else if(elemt.classList.contains('left')){
     return function(){
-      fadeIn(elem, i);
       elemt.classList.add('hexagon-animation');
-      elemt.style.opacity='100%';
       elemt.classList.add('slideLeft');
+      elemt.style.opacity='100%';
     }
   }
 }
@@ -53,14 +59,34 @@ document.addEventListener('scroll', function (){
         setTimeout(item,i*250);
       }
     }
+    step1();
+  }
+  else if(isInViewport(document.getElementById('skillHeader'))){
     function step2(){
       for(let i=0;i<row.length;i++){
         var item2 = slideIn(row,i);
         setTimeout(item2,i*250);
       }
     }
-    step1();
     step2();
+  }
+  else if(isInViewport(document.getElementById('projectType'))){
+    function step3(){
+      for(let i=0;i<project.length;i++){
+        var item = slideIn(project,i);
+        setTimeout(item,i*250);
+      }
+    }
+    step3();
+  }
+  else if(isInViewport(document.getElementById('ContactSection'))){
+    function step4(){
+      for(let i=0;i<row2.length;i++){
+        var item = slideIn(row2,i);
+        setTimeout(item,i*250);
+      }
+    }
+    step4();
   }
 });
 
@@ -69,5 +95,12 @@ document.addEventListener('scroll', function(){
     $('#menu').addClass('fixed');
   } else{
     $('#menu').removeClass('fixed');
+  }
+});
+
+var projectTypeButton = document.getElementsByClassName('projectTypeButton');
+projectTypeButton.addEventListener('click',function(){
+  for(let i=0;i<projectTypeButton.length;i++){
+    projectTypeButton.classList.remove('activeB');
   }
 });
