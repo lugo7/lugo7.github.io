@@ -84,6 +84,11 @@ nav li a{
   text-decoration: none;
 }
 
+.fixed{
+  position: fixed;
+  top:0;
+}
+
 .container{
   padding-top:30px;
   padding-bottom: 50px;
@@ -99,10 +104,14 @@ nav li a{
   justify-content: center;
   font-size: 3em;
   clear: both;
+  height: 100px;
+
 }
 
 #workEthic{
   display: flex;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .ethicItem{
@@ -129,7 +138,7 @@ nav li a{
 
 .hexagon-animation{
   animation-name: appear;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 @keyframes appear {
@@ -166,7 +175,7 @@ nav li a{
 #skills{
     width: 50%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .row{
@@ -176,10 +185,38 @@ nav li a{
   flex-wrap: nowrap;
 }
 
+.slideRight{
+  animation-name: slideRight;
+  animation-duration: 2s;
+}
+
+@keyframes slideRight {
+  0%{
+    transform: translateX(400px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.slideLeft{
+  animation-name: slideLeft;
+  animation-duration: 2s;
+}
+
+@keyframes slideLeft {
+  0%{
+    transform: translateX(-400px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
 .skill{
   background:#123345;
   color: #eee;
-  width: 100px;
+  min-width: 100px;
   text-align: center;
   padding-top: 6px;
 }
@@ -210,6 +247,10 @@ nav li a{
 
 .seven{
   width: 70%;
+}
+
+.six{
+  width: 60%;
 }
 
 .five{
