@@ -6,6 +6,9 @@
   <meta charset="UTF-8"/>
   <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Merriweather&display=swap" rel="stylesheet">
   <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -25,10 +28,10 @@
 
     <nav id='menu'>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html" class="menuItem active">Home</a></li>
+        <li><a href="#aboutSection" class="menuItem">About</a></li>
+        <li><a href="#portfolioSection" class="menuItem">Portfolio</a></li>
+        <li><a href="#ContactSection" class="menuItem">Contact</a></li>
       </ul>
     </nav>
 
@@ -122,32 +125,31 @@
             <div class="projectTypeButton activeB">All</div>
             <div class="projectTypeButton">Web</div>
             <div class="projectTypeButton">Python</div>
-            <div class="projectTypeButton">C++</div>
           </div>
           <div class="projectRow"><!--row--->
             <a href="https://github.com/lugo7/HackedNotifier">
-              <div class="projectItem right">
+              <div class="projectItem" id="hackNoti">
                 <h3>HackedNotifier</h3>
                 <h5>Python/Beautifulsoup</h5>
                 <p>A Python scraper script that notifies people by email that their passwords have been compromised.</p>
               </div>
             </a>
             <a href="https://github.com/lugo7/pongClone">
-              <div class="projectItem right">
+              <div class="projectItem" id="pongClone">
                 <h3>Pong Clone</h3>
                 <h5>Python/Pygame</h5>
                 <p>A Python implementation of the classic game "Pong"</p>
               </div>
             </a>
-            <a href="https://github.com/lugo7/Simon-Says-Clone">
-              <div class="projectItem right">
-                <h3>Simon Says Clone</h3>
+            <a href="https://github.com/lugo7/Memory-game">
+              <div class="projectItem" id="memory">
+                <h3>Memory Game</h3>
                 <h5>JavaScript</h5>
                 <p>A JavaScript implementation of the game "Simon Says"</p>
               </div>
             </a>
             <a href="https://github.com/lugo7/bowCrafter">
-              <div class="projectItem right">
+              <div class="projectItem" id="bowCrafter">
                 <h3>BowCrafter</h3>
                 <h5>HTML/CSS</h5>
                 <p>A small static website</p>
@@ -157,9 +159,10 @@
         </div>
       </div>
     </div>
-    <div class="contact">
-      <div class="container" id="ContactSection">
-        <h1 class="header">Contact</h1>
+
+    <div class="contact" id="ContactSection">
+      <div class="container-small">
+        <h1 class="header" id="contactView">Contact</h1>
         <p>Have a question or want to work together?</p>
         <form>
           <input class="row2 right" type = "text" name = "name" placeholder="Name" /><br>

@@ -1,16 +1,15 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
 html{
   scroll-behavior: smooth;
 }
 
 body{
-  margin: 0 auto;
-  padding: 0;
   overflow-x: hidden;
-}
-
-#background{
-  margin: 0 auto;
-  padding: 0;
 }
 
 #background img{
@@ -29,6 +28,7 @@ body{
   flex-direction: column;
   align-items: center;
   font-size: 1.2em;
+  font-family: 'Merriweather', serif;
 }
 
 #overlay h1{
@@ -43,6 +43,7 @@ body{
   width: 150px;
   border: 2px solid #ddd;
   margin-top: 7px;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
 }
@@ -61,21 +62,23 @@ body{
 }
 
 nav{
-  width: 100%;
+  width:100%;
   height: 40px;
   background: #151B25;
   margin-top: -4px;
   border-bottom: solid 5px #FF0039;
+  font-family: 'Merriweather', serif;
 }
 
 nav ul{
-  display: flex;
   padding-top: 10px;
   list-style-type: none;
   font-size: 1.2em;
+  max-width: 60%;
 }
 
 nav li{
+  display: inline-block;
   margin-right: 40px;
 }
 
@@ -90,13 +93,15 @@ nav li a{
 }
 
 .container{
-  padding-top:30px;
-  padding-bottom: 50px;
+  padding-top:100px;
+  min-height: 1000px;
+  max-width: 1280px;
 }
 
-.container, nav ul{
-  max-width: 60%;
-  margin: 0 auto;
+.container-small{
+  padding-top:100px;
+  min-height: 600px;
+  max-width: 1280px;
 }
 
 .header{
@@ -105,7 +110,7 @@ nav li a{
   font-size: 3em;
   clear: both;
   height: 100px;
-
+  font-family: 'Merriweather', serif;
 }
 
 #workEthic{
@@ -118,11 +123,13 @@ nav li a{
   max-width: 25%;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column nowrap;
+  text-align: center;
+  margin: 10px;
 }
 
 .ethicItem h3, .ethicItem p{
+  width: 200px;
   margin: 0 auto;
   clear: both;
   padding: 10px 20px 0 20px;
@@ -134,9 +141,10 @@ nav li a{
   opacity: 100%;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
 }
 
-.hexagon-animation{
+.fadeIn-animation{
   animation-name: appear;
   animation-duration: 2s;
 }
@@ -151,6 +159,7 @@ nav li a{
 }
 
 .hexagon-top{
+  margin: 0;
   float: left;
   border-right: 30px solid #123345;
   border-top: 52px solid transparent;
@@ -158,6 +167,7 @@ nav li a{
 }
 
 .hexagon-middle{
+  margin: 0;
   float: left;
   width: 60px;
   height: 84px;
@@ -166,6 +176,7 @@ nav li a{
 }
 
 .hexagon-bottom{
+  margin: 0;
   float: left;
   border-left: 30px solid #123345;
   border-top: 52px solid transparent;
@@ -181,6 +192,7 @@ nav li a{
 #skillHeader{
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 15px;
 }
 
 .row{
@@ -197,7 +209,10 @@ nav li a{
 
 @keyframes slideRight {
   0%{
-    transform: translateX(500px);
+    transform: translateX(0);
+  }
+  80%{
+    transform: translateX(150px);
   }
   100%{
     transform: translateX(0);
@@ -211,10 +226,30 @@ nav li a{
 
 @keyframes slideLeft {
   0%{
-    transform: translateX(-500px);
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-150px);
   }
   100%{
     transform: translateX(0);
+  }
+}
+
+.spinIn-animation{
+  animation-name: spinIn;
+  animation-duration: 2s;
+}
+
+@keyframes spinIn {
+  0%{
+    transform: rotate(-30deg);
+  }
+  55%{
+    transform: scale(0.6);
+  }
+  100%{
+    transform: rotate(360deg);
   }
 }
 
@@ -223,7 +258,7 @@ nav li a{
   color: #eee;
   min-width: 100px;
   text-align: center;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 .progressBar{
@@ -247,29 +282,32 @@ nav li a{
 }
 
 .nine{
-  width: 90%;
+  width: 95%;
 }
 
 .seven{
-  width: 70%;
+  width: 75%;
 }
 
 .six{
-  width: 60%;
+  width: 65%;
 }
 
 .five{
-  width: 50%;
+  width: 55%;
 }
 
 .darkerBack{
   background: #e5e5e5;
 }
 
+#projects{
+  margin-top:30px;
+}
+
 #projectType{
   display: flex;
   width:60%;
-  margin: 0 auto;
   font-size: 1.5em;
   margin-bottom: 40px;
 }
@@ -285,37 +323,65 @@ nav li a{
 
 .projectRow{
   display: flex;
-  margin: 0 auto;
+  flex-flow: row wrap;
 }
 
 .projectItem{
-  margin:0 auto;
-  height: 400px;
-  margin-left: 32px;
-  margin-bottom: 8px;
+  height: 300px;
+  width: 300px;
   padding: 4px;
   border: 1px solid red;
   text-align: center;
   background: #252934;
 }
 
+.projectItem>*{
+  margin-bottom: 20px;
+}
+
+.projectItem:hover, #viewWork:hover{
+  color: #FF0039;
+  border: 2px solid #FF0039;
+}
+
+.projectItem>h3{
+  margin-top: 75px;
+}
+
 .projectRow a{
   text-decoration: none;
   color:#eee;
-  width:50%;
+  margin-bottom: 10px;
+}
+
+.overlay2{
+  position: absolute;
+  margin-top: -300px;
+}
+
+#bowCrafter img{
+  object-fit: cover;
+  z-index: -1;
+}
+
+#memory{
+}
+
+#pongClone{
+}
+
+#hackNoti{
 }
 
 .contact{
   background: #252934;
   color: #ddd;
-  height: 600px;
 }
 
 .contact p{
   color: #FF0039;
   width: 50%;
   text-align:center;
-  margin: 0 auto;
   margin-bottom: 40px;
   font-size: 1.2em;
 }
@@ -323,7 +389,6 @@ nav li a{
 .contact form{
   display: block;
   width: 40%;
-  margin: 0 auto;
 }
 
 form input, #emailMessage{
@@ -336,9 +401,14 @@ form input, #emailMessage{
   padding:0 20px 0 20px;
 }
 
+form input:focus, #emailMessage:focus{
+  border: 2px solid #FF0039;
+  outline: #FF0039;
+}
+
 #submit{
   float: right;
-  border: 2px solid #fff;
+  border: 2px solid #FF0039;
   width: 100px;
   line-height: 30px;
   margin-top:-30px;
@@ -358,7 +428,6 @@ form input, #emailMessage{
 
 #socials{
   display: flex;
-  margin: 0 auto;
   width:15%;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -366,14 +435,12 @@ form input, #emailMessage{
 
 #socials img{
   flex-grow: 1;
-  padding-left: 0;
   width: 50px;
   height: 50px;
 }
 
 #social p{
   width: 50%;
-  margin: 0 auto;
   text-align: center;
   padding:10px;
 }

@@ -28,7 +28,7 @@ function isInViewport(elem) {
 function fadeIn(elem,i){
   var elemt = elem[i];
   return function(){
-    elemt.classList.add('hexagon-animation');
+    elemt.classList.add('fadeIn-animation');
     elemt.style.opacity='100%';
   }
 }
@@ -37,70 +37,90 @@ function slideIn(elem,i){
   var elemt = elem[i];
   if(elemt.classList.contains('right')){
     return function(){
-      elemt.classList.add('hexagon-animation');
       elemt.classList.add('slideRight');
-      elemt.style.opacity='100%';
     }
   }
   else if(elemt.classList.contains('left')){
     return function(){
-      elemt.classList.add('hexagon-animation');
       elemt.classList.add('slideLeft');
-      elemt.style.opacity='100%';
     }
   }
 }
 
+function spinIn(elem, i){
+  var elemt = elem[i];
+  return function(){
+    elemt.classList.add('spinIn-animation');
+    elemt.classList.add('scale-animation');
+  }
+}
+
+function activeMenu(elem){
+  let menuItem = document.getElementsByClassName('menuItem');
+  for(let i=0;i<menuItem.length;i++){
+    if(menuItem[i].classList.contains('active')){
+      menuItem[i].classList.remove('active');
+    }
+  }
+  menuItem[elem].classList.add('active');
+}
+
 document.addEventListener('scroll', function (){
+  if(isInViewport(document.getElementById('overlay'))){
+    activeMenu(0);
+  }
   if(isInViewport(document.getElementById('hexRow'))){
     function step1(){
       for(let i=0;i<hex.length;i++){
-        var item = fadeIn(hex,i);
-        setTimeout(item,i*250);
+        setTimeout(fadeIn(hex,i),i*150);
       }
     }
+    activeMenu(1);
+    document.getElementById('menu').classList.remove('fixed');
     step1();
   }
-  else if(isInViewport(document.getElementById('skillHeader'))){
+  if(isInViewport(document.getElementById('skills'))){
     function step2(){
       for(let i=0;i<row.length;i++){
-        var item2 = slideIn(row,i);
-        setTimeout(item2,i*250);
+        setTimeout(fadeIn(row,i),i*150);
+        setTimeout(slideIn(row,i),i*100);
       }
     }
+    document.getElementById('menu').classList.add('fixed');
     step2();
   }
-  else if(isInViewport(document.getElementById('projectType'))){
+  if(isInViewport(document.getElementById('projectType'))){
     function step3(){
       for(let i=0;i<project.length;i++){
-        var item = slideIn(project,i);
-        setTimeout(item,i*250);
+        setTimeout(fadeIn(project,i),i*150);
+        setTimeout(spinIn(project,i),i*100);
       }
     }
+    document.getElementById('menu').classList.add('fixed');
+    activeMenu(2);
     step3();
   }
-  else if(isInViewport(document.getElementById('ContactSection'))){
+  if(isInViewport(document.getElementById('contactView'))){
     function step4(){
       for(let i=0;i<row2.length;i++){
-        var item = slideIn(row2,i);
-        setTimeout(item,i*250);
+        setTimeout(fadeIn(row2,i),i*150);
+        //setTimeout(slideIn(row2,i),i*100);
       }
     }
+    document.getElementById('menu').classList.add('fixed');
+    activeMenu(3);
     step4();
   }
 });
 
-document.addEventListener('scroll', function(){
-  if($(window).scrollTop()>window.innerHeight){
-    $('#menu').addClass('fixed');
-  } else{
-    $('#menu').removeClass('fixed');
-  }
-});
-
+//projectTypeButton is not recognized
+/*
 var projectTypeButton = document.getElementsByClassName('projectTypeButton');
 projectTypeButton.addEventListener('click',function(){
   for(let i=0;i<projectTypeButton.length;i++){
     projectTypeButton.classList.remove('activeB');
   }
+  this.classList.add('activeB');
+  //check which button is selected and filter shown projects respectively.
 });
+*/
