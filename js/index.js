@@ -1,12 +1,10 @@
 var hex = document.getElementsByClassName('ethicItem');
-var row = document.getElementsByClassName('row');
+var aboutMe = document.getElementById('aboutMe');
 var project = document.getElementsByClassName('projectItem');
 var row2 = document.getElementsByClassName('row2');
+var menu = document.getElementById('menu');
 for(let i=0;i<hex.length;i++){
   hex[i].style.opacity="0%";
-}
-for(let i=0;i<row.length;i++){
-  row[i].style.opacity='0%';
 }
 for(let i=0;i<project.length;i++){
   project[i].style.opacity='0%';
@@ -14,6 +12,8 @@ for(let i=0;i<project.length;i++){
 for(let i=0;i<row2.length;i++){
   row2[i].style.opacity='0%';
 }
+aboutMe.style.opacity='0%';
+menu.style.opacity='0%';
 
 function isInViewport(elem) {
   const rect = elem.getBoundingClientRect();
@@ -26,10 +26,12 @@ function isInViewport(elem) {
 }
 
 function fadeIn(elem,i){
-  var elemt = elem[i];
+  if(i!=undefined){
+    elem = elem[i];
+  }
   return function(){
-    elemt.classList.add('fadeIn-animation');
-    elemt.style.opacity='100%';
+    elem.classList.add('fadeIn-animation');
+    elem.style.opacity='100%';
   }
 }
 
@@ -65,7 +67,15 @@ function activeMenu(elem){
   menuItem[elem].classList.add('active');
 }
 
+function controlFadeIn(elem,offset){
+  elem.style.opacity=(offset/10)+'%';
+}
+
 document.addEventListener('scroll', function (){
+  var scrollTop = window.pageYOffset;
+  if(scrollTop>=0){
+    controlFadeIn(menu,scrollTop);
+  }
   if(isInViewport(document.getElementById('overlay'))){
     activeMenu(0);
   }
@@ -76,51 +86,32 @@ document.addEventListener('scroll', function (){
       }
     }
     activeMenu(1);
-    document.getElementById('menu').classList.remove('fixed');
     step1();
   }
-  if(isInViewport(document.getElementById('skills'))){
-    function step2(){
-      for(let i=0;i<row.length;i++){
-        setTimeout(fadeIn(row,i),i*150);
-        setTimeout(slideIn(row,i),i*100);
-      }
-    }
-    document.getElementById('menu').classList.add('fixed');
-    step2();
+  if(isInViewport(document.getElementById('aboutMe'))){
+    setTimeout(function(){
+      aboutMe.classList.add('fadeIn-animation');
+      aboutMe.style.opacity='100%';
+    },100);
+    activeMenu(2);
   }
-  if(isInViewport(document.getElementById('projectType'))){
+  if(isInViewport(document.getElementById('projectType')) || isInViewport(document.getElementById('placeholder'))){
     function step3(){
       for(let i=0;i<project.length;i++){
-        setTimeout(fadeIn(project,i),i*150);
-        setTimeout(spinIn(project,i),i*100);
+        setTimeout(fadeIn(project,i),i*350);
+        setTimeout(spinIn(project,i),i*300);
       }
     }
-    document.getElementById('menu').classList.add('fixed');
-    activeMenu(2);
+    activeMenu(3);
     step3();
   }
-  if(isInViewport(document.getElementById('contactView'))){
+  if(isInViewport(document.getElementById('contactView')) || isInViewport(document.getElementsByTagName('form')[0])){
     function step4(){
       for(let i=0;i<row2.length;i++){
         setTimeout(fadeIn(row2,i),i*150);
-        //setTimeout(slideIn(row2,i),i*100);
       }
     }
-    document.getElementById('menu').classList.add('fixed');
-    activeMenu(3);
+    activeMenu(4);
     step4();
   }
 });
-
-//projectTypeButton is not recognized
-/*
-var projectTypeButton = document.getElementsByClassName('projectTypeButton');
-projectTypeButton.addEventListener('click',function(){
-  for(let i=0;i<projectTypeButton.length;i++){
-    projectTypeButton.classList.remove('activeB');
-  }
-  this.classList.add('activeB');
-  //check which button is selected and filter shown projects respectively.
-});
-*/

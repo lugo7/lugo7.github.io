@@ -1,185 +1,256 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-  <title>Michael Lugo</title>
-  <link rel="Stylesheet" href="style.css" type="text/css">
+  <title>Michael Lugo - Freelance Web Developer</title>
+  <meta name="description" content="Website development to suit your needs. I'm a freelance web developer ready to help you get on the web." />
   <meta charset="UTF-8"/>
   <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Merriweather&display=swap" rel="stylesheet">
+  <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+  <link rel="Stylesheet" href="style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
   <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
   <main>
-    <div id=background>
-      <img src="images/nightSky.jpg"/>
+    <div class="container-mid">
       <div id="overlay">
-        <h1>Hello, I'm <span>Michael Lugo</span>,</h1>
-        <h1>I'm a full-stack web developer.</h1>
-        <div id="viewWork">
-          <a id='link' href="#portfolioSection"><p>View my work</p></a>
-          <!--put an arrow here-->
+        <h1>Hello, I'm <span>Michael Lugo</span></h1>
+        <h1>I'm a freelance developer</h1>
+        <div class="horizontal">
+          <h3><a class='link' href="#ContactSection">View Work</a></h3>
+          <h3><a class='link' href="#ContactSection">Contact</a></h3>
         </div>
       </div>
+      <div id="decoration">
+        <div class="verticalLine line1"></div>
+        <div class="verticalLine line2"></div>
+        <div class="verticalLine line3"></div>
+        <div class="verticalLine line4"></div>
+        <div class="verticalLine line5"></div>
+        <div class="verticalLine line6"></div>
+      </div>
+      <div id="overlay2">
+        <h1>I make websites to suit all your needs</h1>
+        <h2>My sites are all:</h2>
+        <ul>
+
+          <li><h3>Responsive</h3></li>
+          <li><h3>User Friendly</h3></li>
+          <li><h3>SEO Friendly</h3></li>
+          <li><h3>Fast Loading</h3></li>
+        </ul>
+      </div>
+
     </div>
 
-    <nav id='menu'>
+    <nav id='menu' class="fixed">
       <ul>
         <li><a href="index.html" class="menuItem active">Home</a></li>
+        <li><a href="#myServices" class="menuItem">My Services</a></li>
         <li><a href="#aboutSection" class="menuItem">About</a></li>
         <li><a href="#portfolioSection" class="menuItem">Portfolio</a></li>
         <li><a href="#ContactSection" class="menuItem">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="lightBack">
-      <div class="container" id="aboutSection">
-        <h1 class="header">About</h1>
-        <div id="workEthic">
+      <div class="container-mid" id="myServices">
+        <h1 class="header">My Services</h1>
+        <div class="workEthic">
           <div class="ethicItem" id='hexRow'>
             <div class="hexagon">
               <div class="hexagon-top"></div>
-              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:responsive" style="color: white;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:responsive" style="color: #42F2F7;" data-width="60" data-height="60"></span></div>
               <div class="hexagon-bottom"></div>
             </div>
             <h3>Responsive</h3>
-            <p>My websites will work on any device.</p>
+            <p>My websites are built to work on any device they are viewed on</p>
           </div>
           <div class="ethicItem">
             <div class="hexagon">
               <div class="hexagon-top"></div>
-              <div class="hexagon-middle"><span class="iconify" data-icon="akar-icons:light-bulb" style="color: white;" data-width="60" data-height="60"></span></div>
-              <div class="hexagon-bottom"></div>
-            </div>
-            <h3>Intuitive</h3>
-            <p>Websites should be easy for the average user.</p>
-          </div>
-          <div class="ethicItem">
-            <div class="hexagon">
-              <div class="hexagon-top"></div>
-              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:speedometer" style="color: white;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:speedometer" style="color: #42F2F7;" data-width="60" data-height="60"></span></div>
               <div class="hexagon-bottom"></div>
             </div>
             <h3>Fast</h3>
-            <p>Fast load times, and lag free interaction is a must.</p>
+            <p>Custom websites leave out bloat allowing them to load super fast</p>
           </div>
           <div class="ethicItem">
             <div class="hexagon">
               <div class="hexagon-top"></div>
-              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:application-brackets-outline" style="color: white;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="ant-design:user-outlined" style="color: #42f2f7;" data-width="60" data-height="60"></span></div>
               <div class="hexagon-bottom"></div>
             </div>
-            <h3>Clean Code</h3>
-            <p>I write code with readability and reusability in mind.</p>
+            <h3>User Friendly</h3>
+            <p>Don't let your users struggle to find what they are looking for</p>
+          </div>
+          <div class="ethicItem">
+            <div class="hexagon">
+              <div class="hexagon-top"></div>
+              <div class="hexagon-middle"><span class="iconify" data-icon="mdi:application-brackets-outline" style="color: #42F2F7;" data-width="60" data-height="60"></span></div>
+              <div class="hexagon-bottom"></div>
+            </div>
+            <h3>SEO Friendly</h3>
+            <p>Ranking higher in search engines is #1 practice for visibility</p>
           </div>
         </div>
-        <div id="skills">
-          <h2 id="skillHeader">Skills</h2>
-          <div class="row progressBar right">
-            <div class="skill">HTML</div>
-            <div class="progressBar">
-              <div class="fluency nine"></div>
-            </div>
-            <p>90%</p>
+        <div class="workEthic">
+          <div class="service">
+            <h3 class="serviceHeader">Landing Page</h3>
+            <p>1 page landing page. Just what's needed</p>
+            <ul>
+              <li>Custom Design</li>
+              <li>Responsive Between Devices</li>
+              <li>Basic SEO</li>
+            </ul>
+            <p class="pricing">$200+</p>
           </div>
-          <div class="row progressBar left">
-            <div class="skill">CSS</div>
-            <div class="progressBar">
-              <div class="fluency nine"></div>
-            </div>
-            <p>90%</p>
+          <div class="service">
+            <h3 class="serviceHeader">Small Business Website</h3>
+            <p>5 page custom website. Perfect for a small business</p>
+            <ul>
+              <li>Custom Design</li>
+              <li>Responsive Between Devices</li>
+              <li>SEO Services</li>
+            </ul>
+            <p class="pricing">$400+</p>
           </div>
-          <div class="row progressBar right">
-            <div class="skill">JavaScript</div>
-            <div class="progressBar">
-              <div class="fluency six"></div>
-            </div>
-            <p>60%</p>
+          <div class="service">
+            <h3 class="serviceHeader">Business Plus Website</h3>
+            <p>10 page custom website. Great for growing businesses.</p>
+            <ul>
+              <li>Custom Design</li>
+              <li>Responsive Between Devices</li>
+              <li>SEO Services</li>
+            </ul>
+            <p class="pricing">$800+</p>
           </div>
-          <div class="row progressBar left">
-            <div class="skill">Python</div>
-            <div class="progressBar">
-              <div class="fluency seven"></div>
-            </div>
-            <p>70%</p>
+        </div>
+      </div>
+
+    <div class="container" id="aboutSection">
+      <h1 class="header">About</h1>
+      <div id="aboutMe">
+        <div>
+          <h3 class="headerColor">Who Am I</h3>
+          <p>Hey there! I'm Michael Lugo, and I'm a self-taught freelance developer with a passion for technology, and solving problems.</p>
+          <p>When I'm not coding I enjoy playing guitar, and playing with my dogs and cats.</p>
+        </div>
+        <div>
+          <h3 class="headerColor">What I do</h3>
+          <p>I develop, maintain, and refine web systems to help designers, small agencies, businesses, and regular people bring their ideas to life. Powered by Figma, Atom, and coffee, I turn your requirements into fully responsive websites no matter your needs.</p>
+        </div>
+      </div>
+
+      <div id="skills">
+        <h2 class="header">Skills</h2>
+        <div class="workEthic">
+          <div class="service">
+            <h3 class="serviceHeader">Frontend:</h3>
+            <ul>
+              <li>-HTML5</li>
+              <li>-CSS3</li>
+              <li>-SASS</li>
+              <li>-JS ES5/ES6</li>
+              <li>-Bootstrap</li>
+              <li>-Jquery</li>
+            </ul>
           </div>
-          <div class="row progressBar right">
-            <div class="skill">C++</div>
-            <div class="progressBar">
-              <div class="fluency five"></div>
-            </div>
-            <p>50%</p>
+          <div class="service">
+            <h3 class="serviceHeader">Backend:</h3>
+            <ul>
+              <li>-PHP</li>
+              <li>-SQL/MySQL</li>
+            </ul>
+          </div>
+          <div class="service">
+            <h3 class="serviceHeader">Other:</h3>
+            <ul>
+              <li>-C++</li>
+              <li>-python</li>
+              <li>-Git</li>
+              <li>-Wordpress</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="darkerBack">
-      <div class="container" id="portfolioSection">
-        <h1 class="header">Projects</h1>
-        <div id="projects">
-          <div id="projectType">
-            <div class="projectTypeButton activeB">All</div>
-            <div class="projectTypeButton">Web</div>
-            <div class="projectTypeButton">Python</div>
+    <div class="container" id="portfolioSection">
+      <h1 class="header">Projects</h1>
+      <div id="projectType">
+        <div class="projectTypeButton activeB">All</div>
+        <div class="projectTypeButton">Web</div>
+        <div class="projectTypeButton">Python</div>
+      </div>
+      <div id="projectRow"><!--row--->
+        <a href="https://github.com/lugo7/HackedNotifier" class="projectItem" id="placeholder">
+          <div class="overlay2">
+            <h3>HackedNotifier</h3>
+            <h5>Python/Beautifulsoup</h5>
+            <p>A Python scraper script that notifies people by email that their passwords have been compromised.</p>
           </div>
-          <div class="projectRow"><!--row--->
-            <a href="https://github.com/lugo7/HackedNotifier">
-              <div class="projectItem" id="hackNoti">
-                <h3>HackedNotifier</h3>
-                <h5>Python/Beautifulsoup</h5>
-                <p>A Python scraper script that notifies people by email that their passwords have been compromised.</p>
-              </div>
-            </a>
-            <a href="https://github.com/lugo7/pongClone">
-              <div class="projectItem" id="pongClone">
-                <h3>Pong Clone</h3>
-                <h5>Python/Pygame</h5>
-                <p>A Python implementation of the classic game "Pong"</p>
-              </div>
-            </a>
-            <a href="https://github.com/lugo7/Memory-game">
-              <div class="projectItem" id="memory">
-                <h3>Memory Game</h3>
-                <h5>JavaScript</h5>
-                <p>A JavaScript implementation of the game "Simon Says"</p>
-              </div>
-            </a>
-            <a href="https://github.com/lugo7/bowCrafter">
-              <div class="projectItem" id="bowCrafter">
-                <h3>BowCrafter</h3>
-                <h5>HTML/CSS</h5>
-                <p>A small static website</p>
-              </div>
-            </a>
+        </a>
+        <a href="https://github.com/lugo7/pongClone" class="projectItem">
+          <div class="overlay2">
+            <h3>Pong Clone</h3>
+            <h5>Python/Pygame</h5>
+            <p>A Python implementation of the classic game "Pong"</p>
           </div>
-        </div>
+        </a>
+        <a href="https://github.com/lugo7/Memory-game" class="projectItem">
+          <div class="overlay2">
+            <h3>Memory Game</h3>
+            <h5>JavaScript</h5>
+            <p>A JavaScript implementation of the game "Simon Says"</p>
+          </div>
+        </a>
+        <a href="https://github.com/lugo7/bowCrafter" class="projectItem">
+          <div class="overlay2">
+            <h3>BowCrafter</h3>
+            <h5>HTML/CSS</h5>
+            <p>A simple website that shows how to make bow and arrows</p>
+          </div>
+        </a>
       </div>
     </div>
+
+    <div class="decoration">
+      <div class="verticalLine line1"></div>
+      <div class="verticalLine line2"></div>
+      <div class="verticalLine line3"></div>
+      <div class="verticalLine line4"></div>
+      <div class="verticalLine line5"></div>
+      <div class="verticalLine line6"></div>
+    </div>
+
+
 
     <div class="contact" id="ContactSection">
-      <div class="container-small">
+      <div class="container-mid">
         <h1 class="header" id="contactView">Contact</h1>
+        <h1 id="availability">I'm Available!</h1>
         <p>Have a question or want to work together?</p>
+        <p class="spacing">Get in touch with me!</p>
         <form>
-          <input class="row2 right" type = "text" name = "name" placeholder="Name" /><br>
-          <input class="row2 left" type = "text" name = "email" placeholder="Enter email" /><br>
-          <textarea class="row2 right" id="emailMessage" type = "text" name = "emailMessage" placeholder="Your message"></textarea><br>
-          <p class="row2 left" id="submit">Send</p>
+          <input class="row2 right" type = "text" name = "name" placeholder="Name" autocomplete="off"/><br>
+          <input class="row2 left" type = "text" name = "email" placeholder="Enter email" autocomplete="off"/><br>
+          <textarea class="row2 right" id="emailMessage" type = "text" name = "emailMessage" placeholder="Your message" autocomplete="off"></textarea><br>
+          <p class="row2" id="submit">Send</p>
         </form>
       </div>
     </div>
+
     <div id="social">
       <div id="socials">
-        <img src="images/linkedin.svg"/>
-        <img src="images/github-logo.svg"/>
+        <a href="https://www.linkedin.com/in/lugomichael7/"><img src="images/linkedin.svg"/></a>
+        <a href="#"><img src="images/github-logo.svg"/></a>
       </div>
-      <p>Michael Lugo &copy; 2022</p>
+      <h6>Michael Lugo &copy; 2022</h6>
     </div>
   </main>
-  <script src="index.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
